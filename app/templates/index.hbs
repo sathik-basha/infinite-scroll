@@ -1,0 +1,52 @@
+<div>
+  <h1>Users</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          No
+        </th>
+        <th>
+          Name
+        </th>
+         <th>
+          Email
+        </th>
+         <th>
+          Gender
+        </th>
+         <th>
+          Status
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+     {{#each this.model as |user index|}}
+       <tr>
+        <td>
+          {{sum index 1}}
+        </td>
+        <td>
+          {{user.name}}
+        </td>
+         <td>
+          {{user.email}}
+        </td>
+         <td>
+          {{user.gender}}
+        </td>
+         <td>
+          {{user.status}}
+        </td>
+      </tr>
+     {{/each}}
+    </tbody>
+  </table>
+</div>
+<div class="text-center">
+  <button class="btn btn-primary" type="button" {{action "loadMore"}}>
+    Load More
+  </button>
+</div>
