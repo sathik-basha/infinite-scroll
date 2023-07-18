@@ -45,8 +45,6 @@
     </tbody>
   </table>
 </div>
-<div class="text-center">
-  <button class="btn btn-primary" type="button" {{action "loadMore"}}>
-    Load More
-  </button>
-</div>
+{{intersect-observer
+  loadMore=(action "loadMore")
+}}
